@@ -191,5 +191,9 @@ a:active {
   text-align: center;
 }
 
-
-  
+.styles_container .videoContainer video {
+  width: 100%;
+  height: auto;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
