@@ -64,7 +64,7 @@ li {
   font-family: "Montserrat", serif;
   justify-content: center;
   font-weight: 400;
-  color: #192550;
+  color: rgb(25, 37, 80);
   font-size: 2.375rem;
   line-height: 2.625rem;
 }
@@ -78,7 +78,7 @@ li {
   line-height: 1;
   letter-spacing: -1px;
   text-align: center;
-  color: #192550;
+  color: rgb(25, 37, 80);
   align-items: center;
   justify-content: center;
   letter-spacing: 1.54px;
@@ -196,4 +196,43 @@ a:active {
   height: auto;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.styles_container .styles_textContainer {
+  padding: 0 2rem;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2.25rem;
+  padding-top: 2.25rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 37.4rem) {
+  body {
+    line-height: calc(.21053vw + 1.32237rem);
+    font-size: calc(.10526vw + .97368rem);
+  }
+  h1 {
+    line-height: calc(1.52632vw + 2.24342rem);
+    font-size: calc(1.36842vw + 2.03289rem);
+}
+}
+
+@media (min-width: 64em) {
+  .styles_container {
+    display: inline;
+    padding: 0 4rem;
+    position: relative;
+    bottom: 10px;
+    z-index: 1;
+    text-align: left;
+    width: 100%;
+    object-fit: contain;
+    text-size-adjust: 100%;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
 }
