@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/289f35a1e7.js" crossorigin="anonymous"></script>
-  <script src="app.js" defer></script>
+  <script src="index.js" defer></script>
 </head>
 <nav>
   <img
@@ -37,8 +37,8 @@
   </div>
   <div class="styles_container">
     <div class="videoContainer">
-      <video autoplay="" loop="" muted="" playsinline="">
-        <source src=video/1.mp4 type="video/mp4">
+      <video autoplay="" loop="" muted="" playsinline="" id="videoPlayer">
+        <source src=video/1.mp4 id="mp4Source" type="video/mp4">
         Your browser does not support the video tag.
         </video>
     </div>
@@ -47,10 +47,10 @@
   <div class = "selection">
   <div class="styled-break"></div>
   <div class = "hero-buttons">
-      <div class = "button" id = "read">I want to read a book
+      <div class = "button" id = "read" data-read>I want to read a book
       </div>
-      <div class = "button" id = "add">I want to add a book</div>
-      <div class = "button" id = "remove">I want to remove a book</div>
+      <div class = "button" id = "add" data-add>I want to add a book</div>
+      <div class = "button" id = "remove" data-delete>I want to remove a book</div>
   </div>
 </div>
 </body>
