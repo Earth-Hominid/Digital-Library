@@ -1,51 +1,55 @@
-const data = [
+const myLibrary = [
   {
     title: "JavaScript: The Good Parts", 
     author: "by Douglas Crockford", 
     pages: 172, 
     pagesRead: 0, 
-    pic: "images/good.jpeg",
+    cover: "images/good.jpeg",
   },
   {
     title: "JavaScript: The Definitive Guide", 
     author: "by David Flanagan", 
     pages: 706, 
     pagesRead: 200,
-    pic: "images/def.jpg", 
+   cover: "images/def.jpg", 
   },
   {
     title: "Eloquent JavaScript: A Modern Introduction to Programming", 
     author: "by Marijn Haverbeke", 
     pages: 472, pagesRead: 0,
-    pic: "images/elo.jpeg",
+   cover: "images/elo.jpeg",
   }
 ];
 
-const createBookCard = (book) => {
+const displayBook = (book) => {
   // Create HTML elements to display the book on a card
   const cardDiv = document.createElement('div');
-  const h4 = document.createElement('h4');
-  const h5 = document.createElement('h5');
-  const img = document.createElement('img');
+  cardDiv.classList.add("cardDiv")
+  const displayBookTitle = document.createElement('h3');
+  const displayBookAuthor = document.createElement('h4');
+  const displayBookPages = document.createElement('h5');
+  const displayBookPagesRead = document.createElement('h5');
+  const displayCover = document.createElement('img');
 
   // select body element for newly created elements to be appended
-  const show = document.querySelector('div.show');
+  const show = document.querySelector('div.book');
   
   // Append the elements to the DOM
   show.appendChild(cardDiv); 
-  cardDiv.append(img); // Add the img inside the div
-  cardDiv.append(h4); // Add the h4 inside the div
-  cardDiv.append(h5); // Add h5 tag inside of the h4
+  cardDiv.append(displayCover, displayBookTitle, displayBookAuthor, displayBookPages, displayBookPagesRead);
   
   // Set content and attributes
-  h4.innerHTML = book.title;
-  h5.innerHTML = book.author;
+  displayBookTitle.innerHTML = book.title;
+  displayBookAuthor.innerHTML = book.author;
+  displayBookPages.innerHTML = "Pages: " + book.pages;
+  displayBookPagesRead.innerHTML = "Pages Read: " + book.pagesRead;
   // use setAttribute to add the card class to the div
-  img.setAttribute('src', book.pic);
-  cardDiv.setAttribute("class", "card");
+
+  // cardDiv.setAttribute("class", "card");
+  displayCover.setAttribute('src', book.cover);
 };
 
-data.forEach(book => createBookCard(book))
+myLibrary.forEach(book => displayBook(book))
 
 
 

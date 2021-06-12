@@ -54,7 +54,59 @@
   </div>
   <div class="selection">
     <div class="styled-break"></div>
-  <div class="show"></div>
+  </div>
+    <div class="book"></div>
+
+
+<div class="form-section">
+  <div class="form">
+      <div class="title-section">
+        <form>
+        <input type="text" name="title" id ="title" autocomplete="off" required/>
+          <label for="title" class="label-title">
+            <span class="content-title">Title</span>
+          </label>
+      </div>
+    </div>
+    <div class="form">
+      <div class="author-section">
+          <input type="text" name="author" id ="author" autocomplete="off" required> 
+            <label for="author" class="label-author">
+              <span class="content-author">Author</span>
+            </label>
+      </div>
+    </div>
+    <div class="form">
+      <div class="pages-section">
+          <input type="number" name="pages" id ="pages" autocomplete="off" required> 
+            <label for="pages" class="label-pages">
+              <span class="content-pages">Pages</span>
+            </label>
+      </div>
+    </div>
+    <div class="form">
+      <div class="read-section">
+          <input type="number" name="read" id ="read" autocomplete="off" required> 
+            <label for="read" class="label-read">
+              <span class="content-read">Pages Read</span>
+            </label>
+      </div>
+    </div>
+      <div class="form">
+        <div class="button-section">
+          <label for="completed" required>
+            <span class="completed">Finished Reading</span>
+            <select id="completed">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
+      </div>
+    </div>
+    <button type="submit">Add Book</button>
+    </div>
+  </div>
+</form>
 </div>
 </body>
 </html>
