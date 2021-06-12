@@ -47,6 +47,7 @@ const displayBook = (book) => {
 
   // cardDiv.setAttribute("class", "card");
   displayCover.setAttribute('src', book.cover);
+  displayCover.setAttribute("id", "placeholder")
 };
 
 myLibrary.forEach(book => displayBook(book))
