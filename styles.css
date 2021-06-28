@@ -90,22 +90,32 @@ nav {
 }
 
 .menu-one {
-  background-color: rgb(120, 93, 220);
-  border-radius: 8px 8px 8px 8px;
+  align-items: center;
   box-sizing: border-box;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
   display: flex;
+  height: 3rem;
+  margin-left: 1.25rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
   font-family: Zen, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-  height: 48px;
-  line-height: 22px;
-  margin-left: 20px;
-  padding-bottom: 12px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 12px;
+  line-height: 1.375rem;
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+  background-color: rgb(120, 93, 220);
+  border-color: rgb(120, 93, 220);
+  border-radius: 8px 8px 8px 8px;
+  cursor: pointer;
+}
+
+.menu-one:hover {
+  color:rgb(255, 255, 255);
+  background-color: #EF4b6C;
 }
 
 li {
@@ -172,7 +182,6 @@ li {
 .button-container {
   box-sizing: border-box;
   display: block;
-  padding-bottom: 40px;
   padding-top: 40px;
   text-size-adjust: 100%;
 }
@@ -223,7 +232,7 @@ a {
 }
 
 a:hover {
-  color: grey;
+  color: rgb(120, 93, 220);
 }
 
 a:active {
