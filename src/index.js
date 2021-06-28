@@ -305,5 +305,3 @@ const refreshLibrary = () => {
     displayCover.setAttribute('id', 'placeholder');
   });
 };
-
-
