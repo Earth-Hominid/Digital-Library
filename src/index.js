@@ -61,10 +61,12 @@ const showForm = () => {
 };
 
 const addButton = () => {
+
+  let buttonContainer = document.querySelector('.button-container');
   // Create <div> element
   const buttonDiv = document.createElement('div');
   buttonDiv.id = 'buttonArea'; // Set its id to "buttonArea"
-  document.body.append(buttonDiv); // Add <div> element to the DOM
+  buttonContainer.appendChild(buttonDiv); // Add <div> element to the DOM
   // Add <button> element
   const addBookButton = document.createElement('button');
   // Set <button> id and add text
@@ -78,6 +80,21 @@ const addButton = () => {
 };
 
 addButton();
+
+const removeButton = () => {
+  
+  // Add <button> element
+  const removeBookButton = document.createElement('button');
+  // Set <button> id and add text
+  removeBookButton.id = 'remove';
+  removeBookButton.textContent = 'I want to remove a book';
+  // Add <button> element to the created <div> element
+  const addButton = document.getElementById('buttonArea');
+  addButton.appendChild(removeBookButton);
+  // Add an event listener to “addButton” that when clicked, the “addBookToLibrary” function runs.
+}
+
+removeButton();
 
 const createForm = () => {
   const formContainer = document.createElement('div');
