@@ -2,14 +2,8 @@
   box-sizing: inherit;
 }
 
-body {
-  font-family: Zen,Arial,sans-serif;
-    font-weight: 400;
-    color: #000;
-}
-
 @media screen and (max-width: 37.4rem) {
-  body {
+  button {
     line-height: calc(.21053vw + 1.32237rem);
     font-size: calc(.10526vw + .97368rem);
   }
@@ -24,7 +18,7 @@ body {
 
 @media screen and (min-width: 25rem)
  {
-  body {
+  button {
     font-size: calc(.10526vw + .97368rem);
     line-height: calc(.21053vw + 1.32237rem);
   }
@@ -323,6 +317,10 @@ img {
 }
 
 #form-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
   max-width: 700px;
   width: 100%;
   background-color: #fff;
