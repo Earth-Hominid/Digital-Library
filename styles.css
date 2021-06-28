@@ -238,6 +238,7 @@ a {
   text-decoration: none;
   color: rgb(39, 54, 100);
   text-size-adjust: 100%;
+  cursor: pointer;
 }
 
 a:hover {

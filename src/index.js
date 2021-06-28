@@ -55,6 +55,11 @@ const displayBook = (book) => {
 
 myLibrary.forEach((book) => displayBook(book));
 
+const showLibrary = () => {
+  document.getElementById('my-library').style.display='block';
+  document.getElementById('library').scrollIntoView();
+}
+
 const showForm = () => {
   document.getElementById('form-container').style.display = 'block';
   document.getElementById('form-container').scrollIntoView();
