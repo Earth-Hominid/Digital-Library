@@ -373,8 +373,8 @@ const showDeleteButton = () => {
 
 const deleteBook = () => {
   // Select the card to be deleted
-  //const deleteCardDiv = document.querySelector('.cardDiv')
-  //deleteCardDiv = ""
+  const deletedCardDiv = document.querySelector('.cardDiv')
+  deletedCardDiv.parentNode.removeChild(deletedCardDiv)
   console.log('clicked');
 };
 
