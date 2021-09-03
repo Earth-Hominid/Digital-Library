@@ -9,6 +9,8 @@ HTML is dynamically rendered and manipulated using JavaScript.
 
 This project is part of **The Odin Project Full Stack [Course](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/library)**
 
+The CSS is built from the ground up and dynamically adjusts for most screen sizes. 
+
 ### Executing program
 
 * Click here for the live [demo](https://earth-hominid.github.io/Digital-Library/)
