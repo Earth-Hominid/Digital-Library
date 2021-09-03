@@ -53,21 +53,21 @@ const displayBook = (book) => {
   displayCover.setAttribute('id', 'placeholder');
 
   // Generate div to hold icon
-  const iconDiv = document.createElement('div')
+  const iconDiv = document.createElement('div');
   // Add classname
-  iconDiv.classList.add('delete-div')
+  iconDiv.classList.add('delete-div');
   // Add id
-  iconDiv.id = 'delete-div'
+  iconDiv.id = 'delete-div';
   // Append to book card
-  cardDiv.append(iconDiv)
+  cardDiv.append(iconDiv);
   // Generate delete icon
   const deleteIcon = document.createElement('IMG');
   // Add source as icon png
   deleteIcon.src = './images/delete.svg';
   // Add classlist for css styling
   deleteIcon.classList.add('delete');
-  // Add id 
-  deleteIcon.id = 'delete'
+  // Add id
+  deleteIcon.id = 'delete';
   // Append icon to the icon div
   iconDiv.append(deleteIcon);
 };
@@ -291,7 +291,8 @@ function addBookToLibrary() {
   let author = document.getElementById('author').value;
   let pages = document.getElementById('pages').value;
   let cover = document.getElementById('cover').value;
-  let selectForm = document.querySelector('form')
+  let selectForm = document.querySelector('form');
+  let formContainer = document.getElementById('form-container');
   let read;
 
   if (document.getElementById('dot-1').checked) {
@@ -304,9 +305,8 @@ function addBookToLibrary() {
 
   const book = new Book(title, author, pages, read, cover);
   myLibrary.push(book);
-  console.warn('added', { book });
-  console.log({ book });
   selectForm.reset(); // to clear the form for the next entries
+  formContainer.style.display = 'none'; // hide form div
   refreshLibrary();
 
   return false;
@@ -343,13 +343,33 @@ const refreshLibrary = () => {
       "this.onerror=null;this.src='images/blank-img.png'"
     );
     displayCover.setAttribute('id', 'placeholder');
+
+    // Generate div to hold icon
+    const iconDiv = document.createElement('div');
+    // Add classname
+    iconDiv.classList.add('delete-div');
+    // Add id
+    iconDiv.id = 'delete-div';
+    // Append to book card
+    cardDiv.append(iconDiv);
+    // Generate delete icon
+    const deleteIcon = document.createElement('IMG');
+    // Add source as icon png
+    deleteIcon.src = './images/delete.svg';
+    // Add classlist for css styling
+    deleteIcon.classList.add('delete');
+    // Add id
+    deleteIcon.id = 'delete';
+    // Append icon to the icon div
+    iconDiv.append(deleteIcon);
   });
 };
 
 // Scoll into view for libary and display delete button
 const showDeleteButton = () => {
-  const deleteDiv = document.querySelectorAll('.delete-div')
-  .forEach((deleteDiv) => deleteDiv.style.display = 'block')
+  const deleteDiv = document
+    .querySelectorAll('.delete-div')
+    .forEach((deleteDiv) => (deleteDiv.style.display = 'block'));
   document.getElementById('library').scrollIntoView();
 };
 
