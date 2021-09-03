@@ -492,3 +492,20 @@ form .category {
     flex-direction: column;
   }
 }
+
+.delete {
+  height: 4.926vh;
+  width: 2.664vw;
+  border: none;
+  opacity: 1;
+  filter: invert(44%) sepia(66%) saturate(6698%) hue-rotate(241deg) brightness(89%) contrast(85%);
+}
+
+.delete:hover {
+  filter: invert(36%) sepia(74%) saturate(2450%) hue-rotate(325deg) brightness(105%) contrast(87%);
+}
+
+.delete-div {
+  padding-top: 2vh;
+  display: none;
+}
