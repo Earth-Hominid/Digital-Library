@@ -291,6 +291,7 @@ function addBookToLibrary() {
   let author = document.getElementById('author').value;
   let pages = document.getElementById('pages').value;
   let cover = document.getElementById('cover').value;
+  let selectForm = document.querySelector('form')
   let read;
 
   if (document.getElementById('dot-1').checked) {
@@ -305,7 +306,7 @@ function addBookToLibrary() {
   myLibrary.push(book);
   console.warn('added', { book });
   console.log({ book });
-  document.querySelector('form').reset(); // to clear the form for the next entries
+  selectForm.reset(); // to clear the form for the next entries
   refreshLibrary();
 
   return false;
@@ -345,12 +346,10 @@ const refreshLibrary = () => {
   });
 };
 
-// Delete book
+// Scoll into view for libary and display delete button
 const showDeleteButton = () => {
   const deleteDiv = document.querySelectorAll('.delete-div')
   .forEach((deleteDiv) => deleteDiv.style.display = 'block')
-  // forEach(deleteDiv.style.display = 'block')
-  //document.getElementById('delete-div').style.display = 'block';
   document.getElementById('library').scrollIntoView();
 };
 
