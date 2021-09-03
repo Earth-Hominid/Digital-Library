@@ -375,10 +375,17 @@ const deleteBook = () => {
   // Select the card to be deleted
   //const deleteCardDiv = document.querySelector('.cardDiv')
   //deleteCardDiv = ""
-  console.log('clicked')
-}
+  console.log('clicked');
+};
 
-// Add event listeners: 
+const deleteButton = (() => {
+  const selectDeleteButton = document.querySelectorAll('.delete');
+
+  selectDeleteButton.forEach((selectDeleteButton) =>
+    selectDeleteButton.addEventListener('click', deleteBook)
+  );
+})();
+
+// Add event listeners:
 document.getElementById('btn').addEventListener('click', addBookToLibrary);
 document.getElementById('remove').addEventListener('click', showDeleteButton);
-document.getElementById('delete').addEventListener('click', deleteBook)
