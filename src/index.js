@@ -284,8 +284,6 @@ const createForm = () => {
 
 createForm();
 
-document.getElementById('btn').addEventListener('click', addBookToLibrary);
-
 function addBookToLibrary() {
   let title = document.getElementById('title').value;
   let author = document.getElementById('author').value;
@@ -373,4 +371,14 @@ const showDeleteButton = () => {
   document.getElementById('library').scrollIntoView();
 };
 
+const deleteBook = () => {
+  // Select the card to be deleted
+  //const deleteCardDiv = document.querySelector('.cardDiv')
+  //deleteCardDiv = ""
+  console.log('clicked')
+}
+
+// Add event listeners: 
+document.getElementById('btn').addEventListener('click', addBookToLibrary);
 document.getElementById('remove').addEventListener('click', showDeleteButton);
+document.getElementById('delete').addEventListener('click', deleteBook)
