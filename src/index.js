@@ -51,14 +51,33 @@ const displayBook = (book) => {
   bookRead.textContent = book.read ? 'Finished Reading' : 'Not finished';
   displayCover.setAttribute('src', book.cover);
   displayCover.setAttribute('id', 'placeholder');
+
+  // Generate div to hold icon
+  const iconDiv = document.createElement('div')
+  // Add classname
+  iconDiv.classList.add('delete-div')
+  // Add id
+  iconDiv.id = 'delete-div'
+  // Append to book card
+  cardDiv.append(iconDiv)
+  // Generate delete icon
+  const deleteIcon = document.createElement('IMG');
+  // Add source as icon png
+  deleteIcon.src = './images/delete.svg';
+  // Add classlist for css styling
+  deleteIcon.classList.add('delete');
+  // Add id 
+  deleteIcon.id = 'delete'
+  // Append icon to the icon div
+  iconDiv.append(deleteIcon);
 };
 
 myLibrary.forEach((book) => displayBook(book));
 
 const showLibrary = () => {
-  document.getElementById('my-library').style.display='block';
+  document.getElementById('my-library').style.display = 'block';
   document.getElementById('library').scrollIntoView();
-}
+};
 
 const showForm = () => {
   document.getElementById('form-container').style.display = 'block';
@@ -66,7 +85,6 @@ const showForm = () => {
 };
 
 const addButton = () => {
-
   let buttonContainer = document.querySelector('.button-container');
   // Create <div> element
   const buttonDiv = document.createElement('div');
@@ -87,7 +105,6 @@ const addButton = () => {
 addButton();
 
 const removeButton = () => {
-  
   // Add <button> element
   const removeBookButton = document.createElement('button');
   // Set <button> id and add text
@@ -97,7 +114,7 @@ const removeButton = () => {
   const addButton = document.getElementById('buttonArea');
   addButton.appendChild(removeBookButton);
   // Add an event listener to “addButton” that when clicked, the “addBookToLibrary” function runs.
-}
+};
 
 removeButton();
 
@@ -327,3 +344,14 @@ const refreshLibrary = () => {
     displayCover.setAttribute('id', 'placeholder');
   });
 };
+
+// Delete book
+const showDeleteButton = () => {
+  const deleteDiv = document.querySelectorAll('.delete-div')
+  .forEach((deleteDiv) => deleteDiv.style.display = 'block')
+  // forEach(deleteDiv.style.display = 'block')
+  //document.getElementById('delete-div').style.display = 'block';
+  document.getElementById('library').scrollIntoView();
+};
+
+document.getElementById('remove').addEventListener('click', showDeleteButton);
