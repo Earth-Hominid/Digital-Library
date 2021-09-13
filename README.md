@@ -4,7 +4,7 @@ A virtual space to access and store your digital books.
 
 ## Description
 
-This is a one page application written in Vanilla JavaScript, HTML, and CSS. The project is coded using the Object Oriented Programming methodology and utilizing the class function in JavaScript.
+This is a one page application written in Vanilla JavaScript, HTML, and CSS. The project is coded using the Object Oriented Programming methodology and utilizes the class function in JavaScript.
 HTML is dynamically rendered and manipulated using JavaScript. 
 
 This project is part of **The Odin Project Full Stack [Course](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/library)**
