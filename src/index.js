@@ -135,6 +135,8 @@ const createForm = () => {
 
   const form = document.createElement('form');
   form.id = 'addbookform';
+  // turn off required
+
   content.append(form);
 
   const bookDetails = document.createElement('div');
@@ -196,7 +198,6 @@ const createForm = () => {
   pagesInput.setAttribute('min', '0');
   pagesInput.setAttribute('max', '9999');
   pagesInput.setAttribute('placeholder', 'Enter the number of pages');
-  pagesInput.required = true;
   pagesDiv.append(pagesInput);
 
   // Book Cover
@@ -304,7 +305,7 @@ function addBookToLibrary() {
   const book = new Book(title, author, pages, read, cover);
   myLibrary.push(book);
   selectForm.reset(); // to clear the form for the next entries
-  formContainer.style.display = 'none'; // hide form div
+  // formContainer.style.display = 'none'; // hide form div
   refreshLibrary();
 
   return false;
@@ -373,8 +374,8 @@ const showDeleteButton = () => {
 
 const deleteBook = () => {
   // Select the card to be deleted
-  const deletedCardDiv = document.querySelector('.cardDiv')
-  deletedCardDiv.parentNode.removeChild(deletedCardDiv)
+  const deletedCardDiv = document.querySelector('.cardDiv');
+  deletedCardDiv.parentNode.removeChild(deletedCardDiv);
   console.log('clicked');
 };
 
